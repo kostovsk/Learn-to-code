@@ -1,6 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
 
+    html {
+        font-size: 16px; }
+      
+      body {
+        font-family: "Arial", "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #777;
+        padding: 3rem; }
+
+:focus {
+    outline: none !important;
+}
+        
+        
+button {
+    min-height: 16em;
+    min-width: 14em;
+    font-size: .6em;
+    display: flex;
+    line-height: 2em;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: .5em;
+
+}
+
+ul{
+list-style: none;
+}
+
+li{
+    margin-top: 1em;
+}
+
+.resultwindow{
+    width: 100%;
+    margin: 1em auto;
+    font-size: 2em;
+    
+}
+        
+</style>
 <head>
     <title>Document</title>
 </head>
@@ -19,10 +69,16 @@
             <li>
                  <button value="0" type="button" onclick="selectedAnswer_CLICK(this); return false;">answer 1</button>
             </li>
-            <li>answer 2 </li>
+  
         </ul>
     </div>
-    <script src="script.js"></script>
+
+
+    <div id="divTheResult" class="resultwindow">
+
+    </div>
+
+    <script src="questionProgram.js"></script>
 </body>
 
 </html>

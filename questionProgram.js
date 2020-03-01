@@ -20,7 +20,7 @@ function Question(question, chooseAnswer, correctAnswer) {
 
 var theQuestionLabel = document.getElementById('lblTheQuestion');
 var theListOfButtons  = document.getElementById('listOfButtons');
-
+var thedivTheResult = document.getElementById('divTheResult');
 
 
 window.$HM = new HeaderMiddleware();
@@ -56,6 +56,14 @@ function selectedAnswer_CLICK(el){
     var correctAnswer = false;
     if (el.value == choiceQuestion.correctAnswer){
         correctAnswer = true;
+    }
+
+    if(correctAnswer){
+        thedivTheResult.innerHTML = "Correct!";
+        thedivTheResult.style.color ="#0bad62";
+    }else{
+        thedivTheResult.innerHTML = "Sorry, try again.";
+        thedivTheResult.style.color ="#ad0b0b";
     }
 
     console.log(correctAnswer);
