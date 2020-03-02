@@ -94,3 +94,11 @@ function ReadTheText_ONKEY_EVENT(){
 }
 
 
+var $data = {};
+function BuildObject(){
+    
+    $data.Name = "Mike";
+    $data.Age = 37;
+}
+
+
