@@ -36,11 +36,14 @@ button {
 }
 
 ul{
-list-style: none;
+    list-style: none;
+    
 }
 
 li{
     margin-top: 1em;
+    margin-right: 1em;
+    display: inline-block;
 }
 
 .resultwindow{
@@ -48,6 +51,15 @@ li{
     margin: 1em auto;
     font-size: 2em;
     
+}
+
+.input-wrapper{
+    display: block;
+}
+.input-field{
+    height: 3em;
+    min-width: 16rem;
+    border-radius: 5px;
 }
         
 </style>
@@ -79,6 +91,17 @@ li{
 
     <div id="divTheResult" class="resultwindow">
 
+    </div>
+
+    <div class="input-wrapper">
+        <input class="input-field" onkeyup="ReadTheText_ONKEY_EVENT()" type="text" id="txtBoxInput1" placeholder="Enter some text"></input>
+        <input class="input-button" type="button" id="btnReadData" onclick="ReadTheText_CLICK()" value="Click Here">
+        
+    </div>
+
+    <div class="output-wrapper" id="divOutputWrapper">
+
+        
     </div>
 
     <script src="questionProgram.js"></script>
