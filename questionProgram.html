@@ -61,6 +61,17 @@ li{
     min-width: 16rem;
     border-radius: 5px;
 }
+
+.choices-wrapper{
+    margin-top: 1em;  
+    font-size: 2em;
+    display: block; 
+    color: black; 
+    min-height: 5em;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    transition: all .8s ease;
+}
         
 </style>
 <head>
@@ -72,14 +83,14 @@ li{
 
 <body>
 
-    <div id="divThePrompt" style="border: .5px solid; display: block;">
+    <div id="divThePrompt" style="border: .5px solid; display: block; min-height: 8em;">
         <span id="lblTheQuestion" style="font-size: 2em; color: black;" >
             Question goes here
         </span>
     </div>
 
     <div id="divThePossibleAnswers" 
-    style="margin-top: 1em;  font-size: 2em; display: block; color: black; min-height: 2em;">
+    class="choices-wrapper">
         <ul id="listOfButtons" >
             <li>
                  <button value="0" type="button" onclick="selectedAnswer_CLICK(this); return false;">answer 1</button>
@@ -90,7 +101,7 @@ li{
 
 
     <div id="divNextQuestion" style="margin-top: 1em; font-size: 2em; display: block; color: black; min-height: 2em">
-        <button value="0" type="button" onclick="nextQuestion()">Next Question</button>
+        <button value="0" type="button" onclick="nextQuestion_CLICK()">Next Question</button>
     </div>
 
     <div id="divTheResult" class="resultwindow" style="border: .5px solid; display: block;">

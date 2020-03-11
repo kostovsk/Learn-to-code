@@ -68,6 +68,20 @@ function addButton(indexInArr, btnText){
     return btnString;
 }
 
+
+const theDivThePossibleAnswers =  document.getElementById("divThePossibleAnswers");
+
+function nextQuestion_CLICK(){  
+    thedivTheResult.innerHTML = "";
+    thedivTheResult.style.color ="#ffffff";
+    theDivThePossibleAnswers.style.transform = 'rotateY(180deg)';
+    setTimeout(()=> {
+        theDivThePossibleAnswers.style.removeProperty('transform');
+        nextQuestion();
+    }, 800);
+    
+}
+
 function selectedAnswer_CLICK(el){
     var test = el;
     console.log(el.value);
